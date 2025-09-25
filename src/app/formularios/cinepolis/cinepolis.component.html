@@ -1,0 +1,62 @@
+
+    <title>Cinepolis</title>
+    <link rel="stylesheet" href="cinepolis.component.css">
+<body>
+    <div class="container">
+        <h1 class="titulo text-white">Cinepolis</h1>
+        <div class="container-fluid content-container">
+            <div class="row g-4">
+                <div class="col-md-7">
+                    <fieldset class="border-light">
+                        <legend class="float-none w-auto px-2 text-white">Entradas</legend>
+                        <div class="form-group mb-3">
+                            <label class="text-white">Nombre:</label>
+                            <input type="text" name="nombrep" id="nombre" class="form-control" [(ngModel)]="nombre">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="text-white">Cantidad compradores:</label>
+                            <input type="text" name="compradores" id="compradores" class="form-control" [(ngModel)]="compradores">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="text-white">Tarjeta Cineco:</label>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="tarjeta" value="true" class="form-check-input" [(ngModel)]="tarjeta">
+                                <label class="form-check-label text-white">Sí</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="tarjeta" value="false" class="form-check-input" [(ngModel)]="tarjeta">
+                                <label class="form-check-label text-white">No</label>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="text-white">Cantidad de boletas:</label>
+                            <input type="text" name="cantidad" id="cantidad" class="form-control" [(ngModel)]="cantidad">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-md-5">
+                    <fieldset class="border-light">
+                        <legend class="float-none w-auto px-2 text-white">Salidas</legend>
+                        <div class="form-group mb-3">
+                            <label class="text-white">Valor a pagar:</label>
+                            <input type="text" name="total" id="total" class="form-control" [ngModel]="total" readonly>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <fieldset class="border-light p-3 d-inline-block">
+                        <legend class="float-none w-auto px-2 text-white">Acciones</legend>
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <button type="button" class="btn btn-primary" (click)="tarjetaCinepo()">Procesar</button>
+                            <button type="button" class="btn btn-primary">Salir</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
