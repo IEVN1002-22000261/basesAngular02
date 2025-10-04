@@ -1,0 +1,98 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Selector de Bandas de Resistencia</h1>
+
+  <div class="row justify-content-center">
+
+    <div class="col-2">
+      <table class="table table-bordered table-striped text-center">
+        <thead><tr><th></th><th class="table-light">1ra Banda</th></tr></thead>
+        <tbody>
+          <tr *ngFor="let color of coloresBanda; let idx = index">
+            <td class="table-light">
+              <input type="radio" name="banda1" [(ngModel)]="banda1" [value]="idx">
+            </td>
+            <th [ngClass]="color">{{ idx }}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-2">
+      <table class="table table-bordered table-striped text-center">
+        <thead><tr><th></th><th class="table-light">2da Banda</th></tr></thead>
+        <tbody>
+          <tr *ngFor="let color of coloresBanda; let idx = index">
+            <td class="table-light">
+              <input type="radio" name="banda2" [(ngModel)]="banda2" [value]="idx">
+            </td>
+            <th [ngClass]="color">{{ idx }}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-2">
+      <table class="table table-bordered table-striped text-center">
+        <thead><tr><th></th><th class="table-light">3ra Banda</th></tr></thead>
+        <tbody>
+          <tr *ngFor="let color of coloresBanda; let idx = index">
+            <td class="table-light">
+              <input type="radio" name="banda3" [(ngModel)]="banda3" [value]="idx">
+            </td>
+            <th [ngClass]="color">x{{ multiplicadores[idx] }}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-2">
+      <table class="table table-bordered table-striped text-center">
+        <tbody>
+          <tr>
+            <td class="table-light">
+              <input type="radio" name="tolerancia" [(ngModel)]="tolerancia" [value]="0.05">
+            </td>
+            <th class="table-dorado">Dorado 5%</th>
+          </tr>
+          <tr>
+            <td class="table-light">
+              <input type="radio" name="tolerancia" [(ngModel)]="tolerancia" [value]="0.1">
+            </td>
+            <th class="table-plata">Plata 10%</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary me-md-2" (click)="calcular()" type="button">Calcular</button>
+      </div>
+    </div>
+
+    <div class="col-12 mt-4" *ngIf="mostrarResultados">
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th class="table-light">Color 1</th>
+            <th class="table-light">Color 2</th>
+            <th class="table-light">Multiplicador</th>
+            <th class="table-light">Tolerancia</th>
+            <th class="table-light">Valor</th>
+            <th class="table-light">Valor Máximo</th>
+            <th class="table-light">Valor Mínimo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="color-row">
+            <th [ngClass]="coloresBanda[calculadora.banda1]">{{ calculadora.banda1 }}</th>
+            <th [ngClass]="coloresBanda[calculadora.banda2]">{{ calculadora.banda2 }}</th>
+            <th [ngClass]="coloresBanda[calculadora.banda3]">x{{ calculadora.multiplicador }}</th>
+            <th [ngClass]="getColorTolerancia()">{{ getTextoTolerancia() }}</th>
+            <th>{{ calculadora.valor }}</th>
+            <th>{{ calculadora.valorMax }}</th>
+            <th>{{ calculadora.valorMin }}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

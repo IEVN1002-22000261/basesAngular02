@@ -1,0 +1,58 @@
+.table-cafe {
+  --bs-table-bg: #6F4E37;
+  --bs-table-color: #fff;
+}
+
+.table-rojo {
+  --bs-table-bg: #dc3545;
+  --bs-table-color: #f8f9fa;
+}
+
+.table-naranja {
+  --bs-table-bg: #fd7e14;
+  --bs-table-color: #212529;
+}
+
+.table-morado {
+  --bs-table-bg: #6f42c1;
+  --bs-table-color: #f8f9fa;
+}
+
+.table-gris {
+  --bs-table-bg: #6c757d;
+  --bs-table-color: #f8f9fa;
+}
+
+.table-amarillo {
+  --bs-table-bg: #ffc107;
+}
+
+.table-verde {
+  --bs-table-bg: #198754;
+}
+
+.table-azul {
+  --bs-table-bg: #0d6efd;
+}
+
+.table-blanco {
+  --bs-table-bg: #f8f9fa;
+}
+
+.table-dorado {
+  --bs-table-bg: #e3a319ff;
+}
+
+.table-plata {
+  --bs-table-bg: #71767a;
+  --bs-table-color: #f8f9fa;
+}
+
+.color-row td, .color-row th {
+  vertical-align: middle;
+  height: 35px;
+}
+
+.table-light {
+  color: #212529;
+}

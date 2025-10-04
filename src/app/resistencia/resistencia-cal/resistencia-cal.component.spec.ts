@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ResistenciasComponent } from './resistencias.component';
+import { ResistenciaCalComponent } from './resistencia-cal.component';
 
-describe('ResistenciasComponent', () => {
-  let component: ResistenciasComponent;
-  let fixture: ComponentFixture<ResistenciasComponent>;
+describe('ResistenciaCalComponent', () => {
+  let component: ResistenciaCalComponent;
+  let fixture: ComponentFixture<ResistenciaCalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ResistenciasComponent]
+      declarations: [ResistenciaCalComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ResistenciasComponent);
+    fixture = TestBed.createComponent(ResistenciaCalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
